@@ -1,0 +1,5 @@
+node {
+	stage ('Scripted Pipeline Test') {
+		sh 'echo Hello world!'
+	}
+}
