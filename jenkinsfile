@@ -1,5 +1,12 @@
 node {
-	stage ('Scripted pipeline test') {
-		sh 'echo Hello world!'
-	}
+        stage ('Scripted pipeline test') {
+            sh 'echo Hello world!'
+        }
+        stage ('Learnign scripted pipeline') {
+            git url: 'https://github.com/tvamanrao/spring-petclinic.git',
+                branch: 'main'
+        }
+        stage ('Build') {
+            sh 'mvn package'
+        }
 }
